@@ -3,20 +3,114 @@
   <head>
 
 <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+<script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script> 
 <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@2.1.1/dist/aframe-extras.min.js"></script>
-    
   </head>
     <body>
     <a-scene>
+
       <a-sky color="lightblue"></a-sky>
       
-       <!-- Put this inside the <a-scene> -->
-      <a-entity 
-      ply-model="src:dog.ply"
-      position="0 1 -2"
-      rotation="-90 0 90"
+      <a-entity
+      ply-model="src: base-walls.ply"
+      position="-12 -6 12"
+      rotation="270 0 0"
+      scale="3 3 3"
       ></a-entity>
+
+      <a-entity
+      ply-model="src: rat-statue.ply"
+      position="3 1.6 -8.6"
+      rotation=" 270 -90 0"
+      ></a-entity>
+
+      <a-entity 
+      ply-model="src: RatOne.ply"
+      position="6.4 -1.7 1.5"
+      rotation="270 0 0"
+      ></a-entity>
+      
+      <a-entity
+      ply-model="src: rat-standing.ply"
+      position="0.59 -1.7 1.7"
+      rotation="270 -50 0"
+      ></a-entity>
+      
+      <a-entity
+      ply-model="src: rat2.ply"
+      position="-6.620 -1.58 0.5"
+      rotation="270 50 0"
+      ></a-entity>
+
+      <a-entity
+      ply-model="src:rat-statue"
+      position="1 1 1"
+      rotation=" 0 270 0"
+      light="castShadow: true"
+      ></a-entity>
+
+      <a-light id="dir"
+      type="directional"
+      intensity="0.2"
+      position="0 8.25 0"
+      rotation="0 180 0"
+      color="white"
+      light="castShadow: true"
+      ></a-light>
+
+      <a-light id="spo"
+      type="spotlight"
+      position="1 0.558 -0.706"
+      intensity="1"
+      color="white"
+      light="castShadow: true"
+      rotation="0 270 0"
+      ></a-light>
+
+      <a-light id="poi"
+      type="point"
+      intensity="1"
+      position="9.326 3 -2.752"
+      color="white"
+      light="castShadow: true"
+      animation="
+      property: color;
+      from: #ff0000;
+      to: #00ff00;
+      dur: 1000;
+      loop: true;
+      dir: alternate"
+      ></a-light>
+      <a-light id="poi-2"
+      type="point"
+      intensity="2"
+      color="yellow"
+      light="castShadow: true"
+      position="11 5.36 10.5"
+      visible="false"
+      ></a-light>
+
+      <a-plane id="ground"
+      position="0 0 0"
+      rotation="-90 0 0"
+      color="grey"
+      scale="30 30 30"
+      shadow="recieve: true"
+      ></a-plane>
+
+      <a-entity id="light-main"
+      type="directional"
+      intensity="0.6"
+      light="castShadow: true"
+      color="white"
+      angle="60"
+      position="-11.7 3 2.22"
+      ></a-entity>
+
+
+
                  
     </a-scene>
   </body>
 </html>
+
