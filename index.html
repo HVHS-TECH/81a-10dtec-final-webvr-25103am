@@ -9,7 +9,7 @@
     <body>
     <a-scene>
 
-      <a-sky color="lightblue"></a-sky>
+      <a-sky src="rat-image2.jpg"></a-sky>
       
       <a-entity
       ply-model="src: base-walls.ply"
@@ -74,9 +74,18 @@
       rotation="270 0 0"
       scale="1.5 1.5 1.5"
       animation="
-      property: rotation;
-      from: 0 0 0;
-      to: "
+       property: rotation;
+        from: 270 0 0;
+        to: 270 359 0;
+        loop: true;
+        dir: normal;
+       "
+      ></a-entity>
+
+      <a-entity
+      ply-model="src: rat-var1.ply"
+      position="-5.3 -1.7 10"
+      rotation="270 -205 0"
       ></a-entity>
 
       <a-light id="dir"
