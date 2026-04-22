@@ -34,6 +34,14 @@
       ply-model="src: rat-standing.ply"
       position="0.59 -1.7 1.7"
       rotation="270 -50 0"
+      animation="
+      property: position;
+      easing: easeInExpo;
+      from: 0.59 -1.7 1.7;
+      to: 0.59 -1.4 1.7;
+      dur: 1000;
+      loop: true;
+      dir: alternate"
       ></a-entity>
       
       <a-entity
@@ -86,6 +94,28 @@
       ply-model="src: rat-var1.ply"
       position="-5.3 -1.7 10"
       rotation="270 -205 0"
+      animation="
+      property: position;
+      easing: easeInExpo;
+      from: -5.3 -1.7 10;
+      to: -5.3 -1.4 10;
+      dur: 700;
+      loop: true;
+      dir: alternate"
+      ></a-entity>
+
+      <a-entity
+      ply-model="src: rat-var2.ply"
+      position="0.95 -1.7 2.5"
+      rotation="270 -205 0"
+      animation="
+      property: position;
+      easing: easeInExpo;
+      from: 0.95 -1.7 2.5;
+      to: 0.95 -1.4 2.5;
+      dur: 500;
+      loop: true;
+      dir: alternate"
       ></a-entity>
 
       <a-light id="dir"
